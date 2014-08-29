@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBus", "SimpleBus\SimpleBus.csproj", "{1FB6511F-4286-4A65-BB3D-690A58A4AE42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBus.Contract.Core", "SimpleBus.Contract.Core\SimpleBus.Contract.Core.csproj", "{67B92B3B-8236-4BD5-B2FF-1397B9B258D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestsProjects", "TestsProjects", "{8640D0C4-167F-47FC-BA58-4DA12E298F0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBus.UnitTests", "Tests\UnitTests\SimpleBus.UnitTests\SimpleBus.UnitTests.csproj", "{03AC2855-0D16-4EDB-B54F-1A7B3468AF65}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{7BF6E091-5AB4-445F-9B4B-75FBCDD45C1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueuePing", "Samples\QueuePing\QueuePing.csproj", "{E68FB715-0C01-4E72-9427-5F3649BC2078}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopicFireHose", "Samples\TopicFireHose\TopicFireHose.csproj", "{E6AF4AF6-E3D1-40E9-98D2-E353F73A2951}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBus.Logging", "SimpleBus.Logging\SimpleBus.Logging.csproj", "{61B564EC-E131-45EA-A102-5386BEFDB6E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FB6511F-4286-4A65-BB3D-690A58A4AE42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FB6511F-4286-4A65-BB3D-690A58A4AE42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FB6511F-4286-4A65-BB3D-690A58A4AE42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FB6511F-4286-4A65-BB3D-690A58A4AE42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67B92B3B-8236-4BD5-B2FF-1397B9B258D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B92B3B-8236-4BD5-B2FF-1397B9B258D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B92B3B-8236-4BD5-B2FF-1397B9B258D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B92B3B-8236-4BD5-B2FF-1397B9B258D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03AC2855-0D16-4EDB-B54F-1A7B3468AF65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03AC2855-0D16-4EDB-B54F-1A7B3468AF65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03AC2855-0D16-4EDB-B54F-1A7B3468AF65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03AC2855-0D16-4EDB-B54F-1A7B3468AF65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E68FB715-0C01-4E72-9427-5F3649BC2078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E68FB715-0C01-4E72-9427-5F3649BC2078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E68FB715-0C01-4E72-9427-5F3649BC2078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E68FB715-0C01-4E72-9427-5F3649BC2078}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6AF4AF6-E3D1-40E9-98D2-E353F73A2951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6AF4AF6-E3D1-40E9-98D2-E353F73A2951}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6AF4AF6-E3D1-40E9-98D2-E353F73A2951}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6AF4AF6-E3D1-40E9-98D2-E353F73A2951}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61B564EC-E131-45EA-A102-5386BEFDB6E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61B564EC-E131-45EA-A102-5386BEFDB6E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61B564EC-E131-45EA-A102-5386BEFDB6E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61B564EC-E131-45EA-A102-5386BEFDB6E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{03AC2855-0D16-4EDB-B54F-1A7B3468AF65} = {8640D0C4-167F-47FC-BA58-4DA12E298F0E}
+		{E68FB715-0C01-4E72-9427-5F3649BC2078} = {7BF6E091-5AB4-445F-9B4B-75FBCDD45C1C}
+		{E6AF4AF6-E3D1-40E9-98D2-E353F73A2951} = {7BF6E091-5AB4-445F-9B4B-75FBCDD45C1C}
+	EndGlobalSection
+EndGlobal

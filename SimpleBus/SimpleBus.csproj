@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1FB6511F-4286-4A65-BB3D-690A58A4AE42}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimpleBus</RootNamespace>
+    <AssemblyName>SimpleBus</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ServiceBus, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WindowsAzure.ServiceBus.2.4.2.0\lib\net40-full\Microsoft.ServiceBus.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bus.cs" />
+    <Compile Include="Configuration\BusBuilder.cs" />
+    <Compile Include="Configuration\BusBuilderConfiguration.cs" />
+    <Compile Include="Configuration\BusBuilderConfigurationExtensions.cs" />
+    <Compile Include="Configuration\IValidatableConfigurationSetting.cs" />
+    <Compile Include="Exceptions\MessageDispatchException.cs" />
+    <Compile Include="Infrastructure\IEndpointNamingPolicy.cs" />
+    <Compile Include="Infrastructure\IMessageFactoryFactory.cs" />
+    <Compile Include="Infrastructure\INamespaceManagerFactory.cs" />
+    <Compile Include="Infrastructure\MessageFactoryFactory.cs" />
+    <Compile Include="Infrastructure\NamespaceManagerFactory.cs" />
+    <Compile Include="Infrastructure\NullLogger.cs" />
+    <Compile Include="Queue\IQueueMessageHandlerManager.cs" />
+    <Compile Include="Queue\QueueMessageHandlerManager.cs" />
+    <Compile Include="Configuration\Settings\ConnectionStringSetting.cs" />
+    <Compile Include="Configuration\Settings\MaxConcurrentReceiverCallsSetting.cs" />
+    <Compile Include="Configuration\Settings\Setting.cs" />
+    <Compile Include="Subscription\ISubscriptionMessageHandlerManager.cs" />
+    <Compile Include="Subscription\SubscriptionMessageHandlerManager.cs" />
+    <Compile Include="Exceptions\BusException.cs" />
+    <Compile Include="Extensions\BrokeredMessageExtentions.cs" />
+    <Compile Include="Extensions\NamespaceManagerExtensions.cs" />
+    <Compile Include="Infrastructure\AsyncLazy.cs" />
+    <Compile Include="Infrastructure\BrokeredMessageFactory.cs" />
+    <Compile Include="Infrastructure\IBrokeredMessageFactory.cs" />
+    <Compile Include="Queue\IQueueManager.cs" />
+    <Compile Include="Subscription\ISubscriptionManager.cs" />
+    <Compile Include="Topic\ITopicManager.cs" />
+    <Compile Include="Infrastructure\MessageDispatcher.cs" />
+    <Compile Include="Infrastructure\JsonSerializer.cs" />
+    <Compile Include="MessagePropertyKeys.cs" />
+    <Compile Include="Queue\IQueueMessageDispatcher.cs" />
+    <Compile Include="Subscription\ISubscriptionMessageDispatcher.cs" />
+    <Compile Include="Subscription\SubscriptionMessageDispatcher.cs" />
+    <Compile Include="Queue\QueueMessageDispatcher.cs" />
+    <Compile Include="Queue\IQueueMessageSender.cs" />
+    <Compile Include="Topic\ITopicMessageSender.cs" />
+    <Compile Include="Queue\QueueMessageSender.cs" />
+    <Compile Include="Subscription\SubscriptionManager.cs" />
+    <Compile Include="Topic\TopicMessageSender.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queue\QueueManager.cs" />
+    <Compile Include="Topic\TopicManager.cs" />
+    <Compile Include="Infrastructure\SimpleEndpointNamingPolicy.cs" />
+    <Compile Include="Infrastructure\TopicSubscriptionIdentifier.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleBus.Contract.Core\SimpleBus.Contract.Core.csproj">
+      <Project>{67b92b3b-8236-4bd5-b2ff-1397b9b258d3}</Project>
+      <Name>SimpleBus.Contract.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
